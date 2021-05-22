@@ -28,3 +28,4 @@ def DFS(graph, v, visited):
 # 각 노드가 방문된 정보를 리스트 자료형으로 표현
 visited = [False] * 9
 dfs(graph, 1, visited)
+##
