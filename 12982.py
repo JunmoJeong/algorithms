@@ -18,3 +18,6 @@ def solution(d, budget):
         else:
             d.remove(max(d))
     return 0
+
+
+#
