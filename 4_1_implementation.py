@@ -39,3 +39,6 @@ for plan in plans:
     # 이동 수행
     x, y = nx, ny
 print(x,y)
+
+
+### 수정 
