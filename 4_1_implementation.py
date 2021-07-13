@@ -16,14 +16,14 @@ R R R U D D
 # N을 입력받기
 
 n = int(input())
-x, y = 1,1
+x, y = 1, 1
 plans = input().spllit()
 
 # L, R, U, D에 따른 이동 방향
-dx = [0,0,-1,1]
-dy = [-1,1,0,0]
+dx = [0, 0, -1, 1]
+dy = [-1, 1, 0, 0]
 
-move_types = ['L','R','U','D']
+move_types = ['L', 'R', 'U', 'D']
 
 # 이동 계획을 하나씩 확인
 for plan in plans:
@@ -38,7 +38,8 @@ for plan in plans:
         continue
     # 이동 수행
     x, y = nx, ny
-print(x,y)
+print(x, y)
 
-
-### 수정 
+###
+# 수정
+# 수정수정
