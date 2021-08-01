@@ -1,6 +1,7 @@
 import queue
 
-data_queue = queue.Queue()
-data_queue.put(1)
-data_queue.put("funcoding")
-print(data_queue.qsize())
+data_queue = queue.PriorityQueue()
+
+# tuple
+data_queue.put((10, "korea"))
+data_queue.put((5, 1))
