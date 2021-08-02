@@ -26,3 +26,11 @@ def recursive(data):
         print(data)
         recursive(data-1)
         print("returned", data)
+
+
+data_stack = list()
+
+data_stack.append(1)
+data_stack.append(2)
+
+data_stack.pop()
