@@ -24,3 +24,5 @@ def recursive(data):
         print("ended")
     else:
         print(data)
+        recursive(data-1)
+        print("returned", data)
