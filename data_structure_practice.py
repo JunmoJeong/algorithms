@@ -17,3 +17,10 @@ for index in range(10):
     enqueue(index)
 
 print(len(queue_list))
+
+
+def recursive(data):
+    if data < 0:
+        print("ended")
+    else:
+        print(data)
