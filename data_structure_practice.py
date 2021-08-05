@@ -52,3 +52,19 @@ for index in range(10):
     push(index)
 
 pop()  # 맨 마지막 데이터가 출력
+
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class Node:
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next
+
+
+node1 = Node(1)
+node2 = Node(2)
