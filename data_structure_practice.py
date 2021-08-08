@@ -95,3 +95,10 @@ for index in range(2, 10):
 
 for i in range(2, 10):
     print(i)
+
+node = head
+while node.next:
+    print(node.data)
+    node = node.next
+
+print(node.data)
