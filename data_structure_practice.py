@@ -117,3 +117,14 @@ while search:
 node_next = node.next
 node.next = node3
 node3.next = node_next
+
+
+class Node:
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next
+
+
+class NodeMgmt:
+    def __init__(self, data):
+        # 맨 앞의 node 주소는 알고 있어야 한다. head
