@@ -128,3 +128,27 @@ class Node:
 class NodeMgmt:
     def __init__(self, data):
         # 맨 앞의 node 주소는 알고 있어야 한다. head
+        self.head = Node(data)
+
+    def add(self, data):
+        if self.head == '':
+            self.head = Node(data)
+        else:
+            node = self.head
+            while node.next:
+                node = node.next
+            node.next = Node(data)
+
+    def desc(self):
+        node = self.head
+        while node:
+            print(node.data)
+            node = node.next
+
+
+linkedlist1 = NodeMgmt(0)
+linkedlist.desc()
+
+for data in range(1, 10):
+    linkedlist1.add(data)
+linkedlist1.desc()
