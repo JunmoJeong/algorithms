@@ -178,3 +178,8 @@ class NodeMgmt:
         while node:
             print(node.data)
             node = node.next
+
+    def delete(self, data):
+        if self.head == "":
+            print("해당 값을 가진 노드가 없습니다.")
+            return
