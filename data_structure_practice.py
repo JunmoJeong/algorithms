@@ -307,3 +307,10 @@ class NodeMgmt:
             while node:
                 print(node.data)
                 node = node.next
+
+
+double_linked_list = NodeMgmt(0)
+for data in range(1, 10):
+    double_linked_list.insert(data)
+
+double_linked_list.desc()
