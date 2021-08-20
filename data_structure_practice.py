@@ -314,3 +314,15 @@ for data in range(1, 10):
     double_linked_list.insert(data)
 
 double_linked_list.desc()
+
+
+def search_from_head(self, data):
+    if self.head == None:
+        return False
+    node = self.head
+    while node:
+        if node.data == data:
+            return node
+        else:
+            node = node.next
+    return False
