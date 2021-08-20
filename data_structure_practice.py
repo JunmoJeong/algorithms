@@ -197,3 +197,16 @@ class NodeMgmt:
                     del temp
                 else:
                     node = node.next
+
+
+class Node:
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next
+
+
+class NodeMgmt:
+    def __init__(self, data):
+        if self.head == "":
+            self.head = Node(data)
+        else:
