@@ -260,3 +260,18 @@ for data in range(1, 10):
 linkedlist1.desc()
 linkedlist1.delete(4)
 linkedlist1.desc()
+
+
+class Node:
+    def __init__(self, data, prev=None, next=None):
+        self.prev = prev
+        self.data = data
+        self.next = next
+
+
+class NodeMgmt:
+    def __init__(self, data):
+        self.head = Node(data)
+        self.tail = self.head
+
+    def insert(self, data):
