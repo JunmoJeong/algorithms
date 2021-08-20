@@ -244,3 +244,19 @@ def delete(self, data):
                 return
             else:
                 node = node.next
+
+
+# check
+print(linkedlist1.head)
+linkedlist1.delete(0)
+linkedlist1.head
+# 새로운 노드
+linkedlist1 = NodeMgmt(0)
+linkedlist1.desc()
+
+# 여러 노드 출력
+for data in range(1, 10):
+    linkedlist1.add(data)
+linkedlist1.desc()
+linkedlist1.delete(4)
+linkedlist1.desc()
