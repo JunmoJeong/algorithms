@@ -14,4 +14,6 @@ for i in range(b):
     for j in range(a):
         answer +="*"
     answer += '\n'
+
+#print(answer)
 print(answer)
