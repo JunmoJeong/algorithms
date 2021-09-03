@@ -347,5 +347,6 @@ def insert_before(self, data, before_data):
         node.prev = new
 
         return True
+# retrun True
 
 # hash table
