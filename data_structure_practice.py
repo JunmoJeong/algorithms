@@ -370,11 +370,7 @@ hash_table = list([0 for i in range(8)])
 
 def get_key(data):
     return hash(data)
-
-
 def hash_function(key)
-
-
 return key % 8
 
 
@@ -394,4 +390,21 @@ def read_data(data):
     hash_address = hash_function(get_key(data))
     return hash_table[hash_address]
 
-# hash table
+#-*- coding: utf-8 -*-
+import boto3
+from PIL import Image
+import numpy as np
+import io
+import os
+import json
+
+from tensorflow.python.keras.metrics import top_k_categorical_accuracy
+from tensorflow.python.keras.models import load_model
+
+from gevent.pywsgi import WSGIServer
+
+def read_json(path):
+    with open(path) as file:
+
+def prepare_image(img):
+    
