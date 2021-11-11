@@ -1,45 +1,18 @@
-from abc import *
+def func_a(times):
+    hour = int(times[:2])
+    minute = int(times[3:])
+    return hour*60 + minute
 
 
-class Book(metaclass=ABCMeta):
-    @abstractmethod
-    def get_rental_price(self, day):
-        pass
-
-
-class ComicBook(Book):
-    def get_rental_price(self, day):
-        cost = 500
-        day -= 2
-        if day > 0:
-            cost += 200*day
-        return cost
-
-
-class Novel(Book):
-    def get_rental_price(self, day):
-        cost = 1000
-        day -= 3
-        if day > 0:
-            cost += 300*day
-        return cost
-
-
-def solution(book_types, day):
-    books = []
-    for types in book_types:
-        if types == "comic":
-            books.append(ComicBook())
-        elif types == "novel":
-            books.append(Novel())
-
-    total_price = 0
-    for book in books:
-        total_price += book.get_rental_price(day)
-    return total_price
-
-    book_types = ["comic", "comic", "novel"]
-    day = 4
-    ret = solution(book_types, day)
-
-    print("solution 함수의 반환 값은", ret, "입니다.")
+def solution(subway_times, current_time):
+    current_minute = func_a(current_time)
+    INF = 10000000
+    answer = INF
+    for s in subway_times:
+        subway_minute = func_a(s)
+        if subway_minute >= current_minute:
+            answer = subway_minute - current_minute
+            break
+        if answer == INF:
+            return -1
+        return answer
