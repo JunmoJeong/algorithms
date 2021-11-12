@@ -1,18 +1,23 @@
-def solution(arr):
-    left, right = 0, len(arr) - 1
-    idx = 0
-    answer = [0 for _ in range(len(arr))]
-    while left <= right:
-        if left % == 0:
-            answer[idx] = arr[left]
-            left += 1
-        else:
-            answer[idx] = arr[right]
-            right -= 1
-        idx += 1
-    return answer
+import abc
 
-    arr = [1, 2, 3, 4, 5, 6]
-    ret = solution(arr)
 
-    print("solution 함수의 반환 값은 ", ret, "입니다.")
+def solution(password):
+    length = len(password)
+    for i in range(length - 2):
+        first_check = ord(password[i+1]) - ord(password[i])
+        second_check = ord(password[i]) - ord(password[i+1])
+        if first_check == second_check and (first_check == 1 or first_check == -1):
+            return False
+    return True
+
+    passsword1 = "cospro890"
+
+    length = 9
+
+    first_check = o - c
+    second_check = s - o
+
+
+abc
+b-a
+c-b
