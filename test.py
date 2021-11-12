@@ -1,15 +1,5 @@
-def solution(commands):
-    current_position = [0, 0]
-    for i in commands:
-        if i == "L":
-            current_position[0] += -1
-        elif i == "R":
-            current_position[1] += 1
-
-    return current_position
-
-
-commands = "URDDL"
-ret = solution(commands)
-
-print("solution 함수의 반환 값은 ", ret, "입니다")
+def solution(arr):
+    dp = [1 for _ in range(len(arr))]
+    for i in range(1, len(arr)):
+        if arr[i] > arr[i-1]:
+            dp[i] = dp[
