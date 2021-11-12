@@ -1,23 +1,15 @@
-import abc
+def solution(commands):
+    current_position = [0, 0]
+    for i in commands:
+        if i == "L":
+            current_position[0] += -1
+        elif i == "R":
+            current_position[1] += 1
+
+    return current_position
 
 
-def solution(password):
-    length = len(password)
-    for i in range(length - 2):
-        first_check = ord(password[i+1]) - ord(password[i])
-        second_check = ord(password[i]) - ord(password[i+1])
-        if first_check == second_check and (first_check == 1 or first_check == -1):
-            return False
-    return True
+commands = "URDDL"
+ret = solution(commands)
 
-    passsword1 = "cospro890"
-
-    length = 9
-
-    first_check = o - c
-    second_check = s - o
-
-
-abc
-b-a
-c-b
+print("solution 함수의 반환 값은 ", ret, "입니다")
