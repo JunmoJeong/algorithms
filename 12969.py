@@ -17,4 +17,3 @@ for i in range(b):
 
 # print(answer)
 print(answer)
-print(answer)
