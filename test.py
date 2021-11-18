@@ -1,4 +1,9 @@
-a = 11
-a = '숫자 {}입니다.'.format(a)
+def add(a, b):
+    return a+b
 
-print(a)
+
+def same(a, b):
+    if a == b:
+        return True
+    else:
+        return False
