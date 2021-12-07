@@ -9,4 +9,6 @@ if current_hour % 2 == 0:
         current_hour = str(current_hour)
         f.write(current_hour + '시\n')
 else:
-    print("홀수 시간입니다.")
+    with open("time.txt", "a") as f:
+        current_hour = str(current_hour)
+        f.write(current_hour + '시\n')
