@@ -1,17 +1,11 @@
-a = list(map(int, input().split(' ')))
+n = 1260
+count = 0
 
-ascending = True
-descending = True
+# 큰 단위 화폐부터 차례대로 확인
+list = [500, 100, 50, 10]
 
-for i in range(1, 8):
-    if a[i] > a[i-1]:
-        descending = False
-    elif a[i] < a[i-1]:
-        ascending = False
+for coin in list:
+    count += n // coin  # 해당 화폐로 거슬러 줄 수 있는 동전의 개수 세기
+    n = n % coin
 
-if ascending:
-    print("ascending")
-elif descending:
-    print("descending")
-else:
-    print("mixed")
+print(count)
