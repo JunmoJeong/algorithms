@@ -1,5 +1,8 @@
 # 타이핑 게임 만들기
 
+import time
+import random
+
 WORD_LIST = [
     "남박사의 파이썬 100% 실전 프로그래밍 강좌",
     "파이썬에서 ord() 함수는 문자의 유니코드 값을 알아오는 함수로 10진수 값을 리턴합니다.",
@@ -10,3 +13,25 @@ WORD_LIST = [
     "코딩하세요 코딩~~",
     "독도는 우리땅"
 ]
+random.shuffle(WORD_LIST)
+
+for q in WORD_LIST:
+    start_time = time.time()
+    user_input = str(input(q + '\n')).strip()
+    end_time = time.time() - start_time
+
+    if user_input == "/exit":
+        break
+
+    correct = 0
+    for i, c in enumerate(user_input):
+        if i >= len(q):
+            break
+        if c == q[i]:
+            correct += 1
+    tot_len = len(q)
+    c = correct / tot_len * 100
+    e = (tot_len - correct) / tot_len * 100
+    speed = (correct / end_time) * 60
+
+    print("속도: {} 정확도: {} 오타율: {}".format(speend, c, e))
