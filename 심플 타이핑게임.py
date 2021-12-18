@@ -3,6 +3,9 @@
 import time
 import random
 
+import os
+
+
 WORD_LIST = [
     "남박사의 파이썬 100% 실전 프로그래밍 강좌",
     "파이썬에서 ord() 함수는 문자의 유니코드 값을 알아오는 함수로 10진수 값을 리턴합니다.",
@@ -16,6 +19,7 @@ WORD_LIST = [
 random.shuffle(WORD_LIST)
 
 for q in WORD_LIST:
+    os.system("cls")
     start_time = time.time()
     user_input = str(input(q + '\n')).strip()
     end_time = time.time() - start_time
@@ -34,4 +38,5 @@ for q in WORD_LIST:
     e = (tot_len - correct) / tot_len * 100
     speed = (correct / end_time) * 60
 
-    print("속도: {} 정확도: {} 오타율: {}".format(speend, c, e))
+    print("속도: {:0.2f} 정확도: {:0.2f} 오타율: {:0.2f}".format(speend, c, e))
+    os.system("pause")
