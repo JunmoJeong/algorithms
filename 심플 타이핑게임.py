@@ -40,3 +40,4 @@ speed = (correct / end_time) * 60
 
 print("속도: {} 정확도: {} 오타율: {}".format(speed, c, e))
 os.system("pause")
+
