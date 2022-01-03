@@ -11,4 +11,4 @@ stack.append(4)
 stack.pop()
 
 print(stack)
-print(stack: : -1) # 최상단 원소부터 출력
+print(stack[:: -1])  # 최상단 원소부터 출력
