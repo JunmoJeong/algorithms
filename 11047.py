@@ -9,3 +9,5 @@ for i in range(n-1, -1, -1):
     k = k % arr[i]
 
 print(sum)
+
+
