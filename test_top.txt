@@ -1,0 +1,6 @@
+Processes: 516 total, 4 running, 1 stuck, 511 sleeping, 2282 threads 
+2022/05/06 21:48:06
+Load Avg: 3.22, 2.98, 3.23 
+CPU usage: 15.5% user, 17.18% sys, 67.76% idle 
+SharedLibs: 496M resident, 78M data, 36M linkedit.
+MemRegions: 229573 total, 4011M resident, 250M private, 2105M shared.
