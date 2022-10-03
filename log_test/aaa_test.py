@@ -44,7 +44,7 @@ date_list = pd.date_range(start=start_date, end=end_date, freq='D')
 
 for date in date_list:
     date = str(date)
-    URL = "https://data.myenergy.co.kr/api/haezoom/?key=70e384be35e27604573f3a3b38b248&order=getDayData&date=" + date + "&aptnum=021104000041&category=1"
+    URL = "https://data.myenergy.co.kr/api/haezoom/?key=70e384be35e27604573f3a3b38b248&order=getDayData&date=" + date[:10] + "&aptnum=021104000041&category=1"
     result = requests.get(URL).json()
-    with open('date','w') as f:
+    with open(date[:10],'w') as f:
         json.dump(result,f)
