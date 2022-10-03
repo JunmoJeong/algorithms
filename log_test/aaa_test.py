@@ -12,7 +12,7 @@ file_data = OrderedDict()
 start_date = '20220921'
 end_date = '20220930'
 date_list = pd.date_range(start=start_date, end=end_date, freq='D')
-
+print(date_list)
 # nowDate = datetime.datetime.now()
 # # f = open(nowDate.strftime("%Y-%m-%d) + ".json","w")
 
@@ -33,14 +33,12 @@ date_list = pd.date_range(start=start_date, end=end_date, freq='D')
 ##response = requests.get("https://data.myenergy.co.kr/api/haezoom/?key=70e384be35e27604573f3a3b38b248&order=getDayData&date=2022-04-28&aptnum=021104000041&category=1")
 # print(response.text)
 
-URL = "https://data.myenergy.co.kr/api/haezoom/?key=70e384be35e27604573f3a3b38b248&order=getDayData&date=" + "2022-04-28" + "&aptnum=021104000041&category=1"
-result = requests.get(URL).json()
+
 #print(result)
 #result_data = result.json()
 # file = open('test.json', "w+")
 # file.write(json.dumps(result_data))
 # file.close()
-with open('test.json','w') as f:
-    json.dump(result,f)
+
 
 
