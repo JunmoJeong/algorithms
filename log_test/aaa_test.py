@@ -1,4 +1,5 @@
 # from turtle import pd
+from pkgutil import get_data
 import pandas as pd
 import json
 from collections import OrderedDict
@@ -33,5 +34,10 @@ date_list = pd.date_range(start=start_date, end=end_date, freq='D')
 # print(response.text)
 
 URL = "https://data.myenergy.co.kr/api/haezoom/?key=70e384be35e27604573f3a3b38b248&order=getDayData&date=" + "2022-04-28" + "&aptnum=021104000041&category=1"
-result = requests.get(URL).text
-print(result)
+result = requests.get(URL)
+#print(result)
+result_data = result.json()
+file = open('test.json', "w+")
+file.write(json.dumps(result_data))
+
+
