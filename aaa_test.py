@@ -29,6 +29,9 @@ date_list = pd.date_range(start=start_date, end=end_date, freq='D')
 # with open(nowDate.strftime("%Y-%m-%d) + ".json", 'w', encoding='utf-8') as make_file:
 #     json.dump(file_data, make_file, ensure_ascii=False, indent='\t')
 
-response = requests(
-    "https://data.myenergy.co.kr/api/haezoom/?key=70e384be35e27604573f3a3b38b248&order=getDayData&date=2022-04-28&aptnum=021104000041&category=1")
-print(response.text)
+##response = requests.get("https://data.myenergy.co.kr/api/haezoom/?key=70e384be35e27604573f3a3b38b248&order=getDayData&date=2022-04-28&aptnum=021104000041&category=1")
+# print(response.text)
+
+URL = "https://data.myenergy.co.kr/api/haezoom/?key=70e384be35e27604573f3a3b38b248&order=getDayData&date=2022-04-28&aptnum=021104000041&category=1"
+result = requests.get(URL).text
+print(result)
