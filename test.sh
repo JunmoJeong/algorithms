@@ -1,6 +1,6 @@
 #! /bin/bash
 
-echo -n "input something : "
+echo "input something : "
 read input
 echo "your input : $input"
 
